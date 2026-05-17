@@ -46,3 +46,8 @@ El objetivo fue aplicar conocimientos de desarrollo web utilizando HTML, CSS y B
 ---
 
 ## 📁 Estructura del proyecto
+
+
+## 📊 Diagrama de Gantt
+
+Se incluye un archivo con la planificación del proyecto.
