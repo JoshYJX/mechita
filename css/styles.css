@@ -1,0 +1,433 @@
+/* =========================
+   BASE GENERAL (TODO EL SITIO)
+========================= */
+body {
+  font-family: 'Montserrat', sans-serif; /* tipografía principal */
+  background-color: #0f0a05; /* fondo oscuro */
+  color: #fff; /* texto blanco */
+
+  /* Permite que el footer se mantenga abajo */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR (TODAS LAS PÁGINAS)
+========================= */
+.navbar {
+  /* fondo degradado oscuro */
+  background: linear-gradient(90deg, #1a0e05, #3b1d06);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif; /* fuente elegante */
+  font-size: 1.8rem;
+
+  /* !important asegura que Bootstrap no cambie el color */
+  color: #e0b565 !important;
+}
+
+.nav-link {
+  /* color blanco para links */
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  /* color dorado al pasar el mouse */
+  color: #e0b565 !important;
+}
+
+
+/* =========================
+   BOTONES (GLOBAL)
+========================= */
+.btn-gold {
+  background-color: #e0b565; /* dorado */
+  color: #000; /* texto negro */
+  border-radius: 0; /* bordes rectos */
+  padding: 12px 30px;
+  font-weight: 600;
+}
+
+.btn-outline-gold {
+  border: 2px solid #e0b565; /* contorno dorado */
+  color: #e0b565;
+  border-radius: 0;
+  padding: 12px 30px;
+  font-weight: 600;
+}
+
+.btn-outline-gold:hover {
+  background-color: #e0b565;
+  color: #000;
+}
+
+
+/* =========================
+   INICIO (index.html)
+========================= */
+
+/* HERO PRINCIPAL */
+.hero {
+  min-height: 100vh; /* altura de pantalla completa */
+  padding-top: 120px; /* espacio por navbar fijo */
+  background: linear-gradient(to bottom, #1a0e05, #2b1407);
+}
+
+/* TÍTULO PRINCIPAL */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+}
+
+/* SUBTÍTULO */
+.hero-subtitle {
+  color: #cfcfcf; /* gris suave */
+}
+
+/* TEXTO PEQUEÑO SUPERIOR */
+.hero-tagline {
+  color: #e0b565;
+  letter-spacing: 3px;
+}
+
+
+/* SLIDER */
+.carousel-wrapper {
+  height: 300px; /* altura fija */
+  position: relative;
+  overflow: hidden; /* evita que se desborde */
+}
+
+/* Fuerza altura en todos los elementos del slider */
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-inner img {
+  height: 100%;
+}
+
+/* Ajuste de imagen */
+.carousel-inner img {
+  object-fit: cover;
+}
+
+/* Flechas centradas verticalmente */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+}
+
+
+/* RESPONSIVE (CELULAR) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem; /* reduce tamaño */
+  }
+
+  .carousel-wrapper {
+    height: 220px; /* reduce altura */
+  }
+}
+
+
+/* =========================
+   MENÚ (menu.html)
+========================= */
+
+.menu-section {
+    background-color: #fffaf3; /* fondo claro */
+    color: #000;
+}
+
+/* ETIQUETA SUPERIOR */
+.menu-tag {
+    color: #c79a2d;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+}
+
+/* TÍTULO */
+.menu-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+/* LÍNEA DECORATIVA */
+.menu-divider {
+    width: 80px;
+    height: 3px;
+    background-color: #e9c46a;
+}
+
+/* DESCRIPCIÓN */
+.menu-subtitle {
+    color: #666;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* TARJETA DEL PLATILLO */
+.menu-card {
+    background: #fff;
+    border: 1px solid #eee;
+
+    overflow: hidden; /* necesario para zoom */
+
+    /* transición suave */
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px); /* efecto elevación */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ZOOM DE IMAGEN */
+.menu-card:hover .menu-img img {
+    transform: scale(1.1);
+}
+
+/* CONTENEDOR IMAGEN */
+.menu-img {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* IMAGEN */
+.menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* CONTENIDO */
+.menu-content {
+    padding: 25px;
+    text-align: left;
+}
+
+/* TÍTULO PLATILLO */
+.menu-content h4 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 1.3rem;
+}
+
+/* PRECIO */
+.menu-price {
+    color: #d18f00;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* ESPACIADO TEXTO */
+.menu-content p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   NOSOTROS (nosotros.html)
+========================= */
+
+.about-section {
+    background-color: #fffaf3;
+    color: #000;
+}
+
+/* ETIQUETA */
+.about-tag {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #c79a2d;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* TÍTULO */
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+/* TEXTO */
+.about-text {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* IMAGEN */
+.about-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+/* IMAGEN AJUSTADA */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TESTIMONIO */
+.testimonial-card {
+    background: #fff;
+    border-left: 5px solid #e9c46a;
+    padding: 25px;
+}
+
+.testimonial-card .stars {
+    color: #e9c46a;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   GALERÍA (galeria.html)
+========================= */
+
+.gallery-section {
+    flex: 1;
+    background: linear-gradient(to bottom, #1a0e05, #2b1407);
+    color: #fff;
+}
+
+/* ETIQUETA */
+.gallery-tag {
+    display: block;
+    color: #e0b565;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+}
+
+/* TÍTULO */
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+/* TARJETA IMAGEN */
+.gallery-item {
+    overflow: hidden;
+}
+
+/* IMAGEN */
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* EFECTO ZOOM */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   CONTACTO (contacto.html)
+========================= */
+
+.contact-section {
+    flex: 1;
+    padding-top: 120px;
+}
+
+/* TÍTULO */
+.contact-title {
+    font-family: 'Playfair Display', serif;
+    color: #e0b565;
+}
+
+/* SUBTÍTULO */
+.contact-subtitle {
+    color: #e0b565;
+    letter-spacing: 2px;
+}
+
+/* TEXTO */
+.contact-text {
+    color: #cfcfcf;
+}
+
+/* LÍNEA */
+.divider {
+    width: 50px;
+    height: 2px;
+    background-color: #e0b565;
+}
+
+/* CENTRADO */
+.contact-section .row {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   RESERVAR (reservar.html)
+========================= */
+
+.reservation-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* ETIQUETA */
+.reservation-tag {
+    display: block;
+    color: #e0b565;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+}
+
+/* TÍTULO */
+.reservation-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+}
+
+/* INPUTS */
+.custom-input {
+    background: transparent;
+    border: 1px solid #a8752a;
+    color: #fff;
+    border-radius: 0;
+    padding: 12px;
+}
+
+/* PLACEHOLDER */
+.custom-input::placeholder {
+    color: #c7a16a;
+}
+
+/* FOCUS */
+.custom-input:focus {
+    background: transparent;
+    color: #fff;
+    border-color: #e0b565;
+    box-shadow: none;
+}
+
+
+/* =========================
+   FOOTER (GLOBAL)
+========================= */
+
+.site-footer {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
